@@ -12,3 +12,4 @@ atleta.introduce
 atleta.set_sport("natação")
 atleta.introduce
 atleta.my_sport
+atleta.soma(5, 7)
