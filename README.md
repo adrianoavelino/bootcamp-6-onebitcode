@@ -5,6 +5,7 @@
 ### Minicurso de Ruby on Rails
 - Módulo 2 – Rails console e Active Records
     - `rails new agenda`: cria um projeto rails
+    - `cd agenda`: entra no diretório agenda
     - `rails g model Contact name`: cria a tabela Contact com a coluna name do tipo string
     - `rails g model Phone number contact:references`: cria a tabela Phone com a coluna number do tipo string e a coluna contact como chave estrangeira para a tabela Contact
     - `rails g model Address street number neighborhood`: cria a tabela Address com a coluna street do tipo string, a coluna number do tipo string e a coluna neighborhood do tipo struing
