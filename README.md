@@ -3,6 +3,13 @@
 ### Minicurso de Ruby
 
 ### Minicurso de Ruby on Rails
+- Módulo 1 – Blog em 10 minutos
+    - `rails new my_blog`
+    - `rails g scaffold Category name description`
+    - `rails g scaffold Post title description:text category:references`
+    - `rails g controller Pages home`
+    - `rails db:migrate`
+
 - Módulo 2 – Rails console e Active Records
     - `rails new agenda`: cria um projeto rails
     - `cd agenda`: entra no diretório agenda
