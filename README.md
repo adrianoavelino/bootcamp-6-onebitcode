@@ -40,4 +40,73 @@
         c = Contact.last
         c.destroy
         ```
+- Módulo 2 – Controllers – CRUD
+    - `rails g controller Contacts index show new create edit update destroy`: cria o controller Contact com os métodos index show new create edit update destroy
+    - altere o arquivo `config/routes.rb` conforme o exemplo abaixo:
+    ```ruby
+    Rails.application.routes.draw do
+        get 'contacts/index'
+        get 'contacts/show'
+        get 'contacts/new'
+        post 'contacts/create'
+        get 'contacts/edit'
+        put 'contacts/update'
+        delete 'contacts/destroy'
+        get 'welcome/index'
+        root 'welcome#index'
+    end
+    ```
+    - e no diretório `app/views/contacts/` delete os arquivos destroy.erb, create.erb e destroy.erb
+    - edite o arquivo `app/controllers/contacts_controller.rb` conforme o exemplo abaixo:
+    ```ruby
+    class ContactsController < ApplicationController
+        before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
+        def index
+            @contacts = Contact.all
+        end
+
+        def show
+        end
+
+        def new
+            @contact = Contact.new
+        end
+
+        def create
+            @contact = Contact.new(contact_params)
+            if @contact.save
+            redirect_to contacts_path
+            else
+            render :new, notice: "Não foi possível criar um novo contato"
+            end
+        end
+
+        def edit
+        end
+
+        def update
+            if @contact.update(contact_params)
+            redirect_to contacts_path
+            else
+            render :new, notice: "Não foi possível editar o contato"
+            end
+        end
+
+        def destroy
+            @contact.destroy
+            redirect_to contact_path
+        end
+
+        private
+
+        def set_contact
+            @contact = Contact.find(params[:id])
+        end
+
+        def contact_params
+            params.require(:contact).permit(:name)
+        end
+    end
+    ```
+    
