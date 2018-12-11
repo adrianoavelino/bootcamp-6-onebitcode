@@ -124,3 +124,7 @@
 
 - Módulo 2 – Helpers    
 **Helpers** são módulos que disponibilizam métodos para as views. Os helpers existentes em `AplicationHelper` são disponíveis para toda a aplicação, mas os `NomeDosModelsHelp` ficam disponíveis somente para suas views. Exemplo: `<%= link_to "Posts", posts_path %>`
+
+- Módulo 2 – ERB – Embedded Ruby
+    - `<%= %>`: exibe o conteúdo na view
+    - `<% %>`: não exibe o conteúdo na view. É usado para manter a lógica como um loop `for`.
