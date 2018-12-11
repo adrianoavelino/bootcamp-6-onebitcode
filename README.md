@@ -116,6 +116,8 @@
         end
     end
     ```
+    - [http://localhost:3000/rails/info/routes](http://localhost:3000/rails/info/routes): lista as rotas existentes no ambiente de desenvolvimento
+    
 - Módulo 2 – Parâmetros
 
     Para verificar os parâmetros, após iniciar o server com `rails server`, adicione o comando `byebug` dentro do método arquivo `app/controllers/categories_controller.rb`. Assim que for acessada a url utilize o terminal para verificar os valores. Exemplo: params
