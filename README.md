@@ -117,7 +117,10 @@
     end
     ```
     - [http://localhost:3000/rails/info/routes](http://localhost:3000/rails/info/routes): lista as rotas existentes no ambiente de desenvolvimento
-    
+
 - Módulo 2 – Parâmetros
 
     Para verificar os parâmetros, após iniciar o server com `rails server`, adicione o comando `byebug` dentro do método arquivo `app/controllers/categories_controller.rb`. Assim que for acessada a url utilize o terminal para verificar os valores. Exemplo: params
+
+- Módulo 2 – Helpers    
+**Helpers** são módulos que disponibilizam métodos para as views. Os helpers existentes em `AplicationHelper` são disponíveis para toda a aplicação, mas os `NomeDosModelsHelp` ficam disponíveis somente para suas views. Exemplo: `<%= link_to "Posts", posts_path %>`
