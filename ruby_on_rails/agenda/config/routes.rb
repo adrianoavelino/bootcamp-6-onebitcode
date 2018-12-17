@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'address/number'
+  get 'pages/home'
+  resources :contacts
+
+  root 'pages#home'
 end
